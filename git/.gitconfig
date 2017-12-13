@@ -1,24 +1,40 @@
-# This is Git's per-user configuration file.
 [user]
-  email = nathan.schwartz95@gmail.com
-  name = Nathan Schwartz
-[push]
-  default = simple
-[merge]
-  tool = vimdiff
+	name = Taylor King
+	email = dekkofilms@gmail.com
+[credential]
+	helper = osxkeychain
 [core]
-  editor = vim
-  ignorecase = false
+
+  # You can specify your preferred git editor here if you don't want to set an environment variable.
+	editor = nano
+
+  # Mac will ignore file cases by default
+	ignorecase = false
+
 [alias]
-  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+
   s = status
+
   d = diff
+
   co = checkout
+
   cob = checkout -b
-  wip = !git add -A && git commit -m 'wip'
-  cm = commit -m
+
+  # List all current aliases
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+
+  # List commit ancestry in a dense, useful format that includes short SHA1 hashes
+  ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+  # Alias for commitizen
+  cm = cz
+
+  # Meld staged changes into previous commit and edit commit message
   ca = commit --amend
+
+  # Meld staged changes into previous commit without changing commit message
   cae = commit --amend --no-edit
-# l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-  l = log --graph --pretty=format:'%Cred%h%Creset - %Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  wtf = "! git log --pretty=tformat:\"%C(auto,yellow)%h%C(auto)%d%C(auto,reset) by %C(auto,blue)%cn%C(auto,reset), %C(auto,cyan)%ar%C(auto,reset)%n %s%n\" --stat"
+
+  # Add all unstaged changes and commit with "wip" message (use sparingly)
+  wip = !git add -A && git commit -m 'wip'
