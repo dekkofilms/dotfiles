@@ -426,6 +426,7 @@ nnoremap k gk
 xnoremap j gj
 xnoremap k gk
 
+nnoremap gf <c-w>gf
 " " Easier split navigation
 " NOTE: These have been deprecated in favor of C-h, C-j, C-k, and C-l for
 " compatibility with vim-tmux-navigator
