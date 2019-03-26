@@ -7,7 +7,7 @@
 [core]
 
   # You can specify your preferred git editor here if you don't want to set an environment variable.
-	editor = nano
+	editor = vim
 
   # Mac will ignore file cases by default
 	ignorecase = false
@@ -42,3 +42,9 @@
 
   # Add all unstaged changes and commit with "wip" message (use sparingly)
   wip = !git add -A && git commit -m 'wip'
+
+  # Force push with no verify
+  pushhard = push -f --no-verify
+
+  # WTF brah?
+  wtf = "! git log --pretty=tformat:\"%C(auto,yellow)%h%C(auto)%d%C(auto,reset) by %C(auto,blue)%cn%C(auto,reset), %C(auto,cyan)%ar%C(auto,reset)%n %s%n\" --stat"
