@@ -31,6 +31,9 @@
   # Alias for commitizen
   cm = cz
 
+  # Commit hard
+  ch = commit --no-verify
+
   # Meld staged changes into previous commit and edit commit message
   ca = commit --amend
 
