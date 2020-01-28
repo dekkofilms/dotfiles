@@ -9,7 +9,7 @@ These instructions assume you are on a mac (only tested on high sierra) and have
 To start using my dotfiles on a new computer run the following:
 ```bash
 # clone repo and all submodules to home directory
-git clone --recursive https://github.com/Nathan-Schwartz/dotfiles.git ~/dotfiles
+git clone --recursive https://github.com/dekkofilms/dotfiles.git ~/dotfiles
 
 cd ~/dotfiles
 
