@@ -513,6 +513,10 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" ---------- Python Setup ---------- {{{1
+" Turning on(1)/off(0) syntax highlighting for python
+let g:python_highlight_all = 1
+
 " ---------- Perf fix ---------- {{{1
 " Fix Cursor rendering issue
 set ttyfast
