@@ -181,8 +181,8 @@ endfunction
 
 " ---------- Ale ---------- {{{2
 " Set up auto fixers
-let g:ale_fixers = { 'javascript': ['eslint', 'prettier-eslint'] }
-let g:ale_linters = { 'javascript': ['flow', 'eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint', 'prettier-eslint'], 'python': ['autopep8'], 'python3': ['autopep8'] }
+let g:ale_linters = { 'javascript': ['flow', 'eslint'], 'python': ['pylint'], 'python3': ['pylint'] }
 let g:ale_yaml_yamllint_options='-d "{extends: relaxed, rules: {line-length: disable}}"'
 
 let g:ale_lint_delay = 50
